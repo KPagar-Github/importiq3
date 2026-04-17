@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Import IQ — Profit Calculator</title>
+<title>ImportIQ — Profit Calculator</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -36,7 +36,7 @@ header{padding:44px 0 36px;display:flex;align-items:flex-end;justify-content:spa
 .logo{display:flex;align-items:center;gap:12px}
 .logo-mark{width:36px;height:36px;background:var(--accent);border-radius:9px;display:flex;align-items:center;justify-content:center}
 .logo-mark svg{width:18px;height:18px}
-.logo-text{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--text);letter-spacing:-0.02em}
+.logo-text{font-family:var(--serif);font-size:21px;color:var(--text);letter-spacing:-0.02em}
 .logo-text span{color:var(--accent)}
 .header-badge{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
 
@@ -153,36 +153,6 @@ header{padding:44px 0 36px;display:flex;align-items:flex-end;justify-content:spa
 .breakdown-table td:last-child{text-align:right;font-family:var(--mono);font-weight:500;color:var(--text)}
 .breakdown-table .group-head td{padding-top:14px;padding-bottom:4px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-family:var(--sans);border-bottom:0.5px solid var(--border)}
 
-/* Currency toggle */
-.currency-toggle{display:flex;align-items:center;gap:8px}
-.currency-toggle span{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:0.06em}
-.toggle-pill{display:flex;background:var(--surface2);border:0.5px solid var(--border);border-radius:20px;padding:3px;gap:2px}
-.toggle-pill button{font-family:var(--mono);font-size:11px;font-weight:500;padding:4px 10px;border-radius:16px;border:none;cursor:pointer;background:transparent;color:var(--muted);transition:all 0.15s;letter-spacing:0.04em}
-.toggle-pill button.active{background:var(--accent);color:#0d0f12}
-.toggle-pill button:hover:not(.active){color:var(--text)}
-
-/* Hamburger + FX Converter panel */
-.hamburger-wrap{position:relative}
-.hamburger-btn{width:36px;height:36px;border-radius:9px;border:0.5px solid var(--border);background:var(--surface2);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;transition:border-color 0.15s,background 0.15s}
-.hamburger-btn:hover{border-color:var(--border2);background:var(--surface3)}
-.hamburger-btn span{display:block;width:14px;height:1.5px;background:var(--muted2);border-radius:2px;transition:background 0.15s}
-.hamburger-btn.open span{background:var(--accent)}
-.fx-panel{position:absolute;right:0;top:44px;width:280px;background:var(--surface);border:0.5px solid var(--border2);border-radius:14px;padding:18px;z-index:100;box-shadow:0 12px 40px rgba(0,0,0,0.5);display:none;animation:fadeUp 0.2s ease}
-.fx-panel.open{display:block}
-.fx-panel-title{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.fx-panel-title::after{content:'';flex:1;height:0.5px;background:var(--border)}
-.fx-row{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-.fx-row input{flex:1;background:var(--surface2);border:0.5px solid var(--border);border-radius:8px;padding:8px 10px;font-size:14px;color:var(--text);font-family:var(--mono);outline:none;transition:border-color 0.15s;min-width:0}
-.fx-row input:focus{border-color:rgba(200,240,90,0.4)}
-.fx-row label{font-family:var(--mono);font-size:11px;color:var(--muted);width:32px;flex-shrink:0}
-.fx-swap{width:28px;height:28px;border-radius:6px;border:0.5px solid var(--border);background:var(--surface2);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;transition:all 0.15s;flex-shrink:0}
-.fx-swap:hover{border-color:var(--accent);color:var(--accent)}
-.fx-rate-line{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:12px;padding:6px 8px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border)}
-.fx-rate-line span{color:var(--accent)}
-.fx-copy-btn{width:100%;padding:8px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface2);color:var(--muted2);font-family:var(--mono);font-size:11px;cursor:pointer;transition:all 0.15s;letter-spacing:0.04em}
-.fx-copy-btn:hover{border-color:var(--accent);color:var(--accent)}
-.fx-copy-btn.copied{border-color:var(--green);color:var(--green)}
-
 footer{margin-top:48px;padding-top:20px;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center}
 footer p{font-size:12px;color:var(--muted)}
 .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:6px;animation:pulse 2s infinite}
@@ -194,37 +164,12 @@ footer p{font-size:12px;color:var(--muted)}
 
   <header>
     <div class="logo">
-      <span class="logo-text">Import <span>IQ</span></span>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
-      <span class="header-badge">China → India · Duty Calculator</span>
-      <div style="display:flex;align-items:center;gap:8px">
-        <div class="currency-toggle">
-          <span>Display in</span>
-          <div class="toggle-pill">
-            <button id="btn-inr" class="active" onclick="setCurrency('INR')">₹ INR</button>
-            <button id="btn-usd" onclick="setCurrency('USD')">$ USD</button>
-          </div>
-        </div>
-        <div class="hamburger-wrap">
-          <button class="hamburger-btn" id="hbtn" onclick="toggleFxPanel()" title="FX Converter">
-            <span></span><span></span><span></span>
-          </button>
-          <div class="fx-panel" id="fxPanel">
-            <div class="fx-panel-title">Live FX Converter</div>
-            <div class="fx-rate-line">Rate: 1 USD = <span id="fx-rate-display">83.50</span> INR</div>
-            <div class="fx-row">
-              <label id="fx-from-label">USD</label>
-              <input id="fx-from" type="number" placeholder="0.00" oninput="fxConvert('from')"/>
-              <button class="fx-swap" onclick="fxSwap()" title="Swap">⇄</button>
-              <label id="fx-to-label">INR</label>
-              <input id="fx-to" type="number" placeholder="0.00" oninput="fxConvert('to')"/>
-            </div>
-            <button class="fx-copy-btn" id="fx-copy-btn" onclick="fxCopy()">Copy result</button>
-          </div>
-        </div>
+      <div class="logo-mark">
+        <svg viewBox="0 0 18 18" fill="none"><path d="M3 15L9 3L15 15" stroke="#0d0f12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 11H12.5" stroke="#0d0f12" stroke-width="2" stroke-linecap="round"/></svg>
       </div>
+      <span class="logo-text">Import<span>IQ</span></span>
     </div>
+    <span class="header-badge">China → India · Duty Calculator</span>
   </header>
 
   <div class="tagline">
@@ -251,11 +196,11 @@ footer p{font-size:12px;color:var(--muted)}
           <div class="field"><label>Product name</label><input id="pname" value="Wireless Earbuds (TWS)"/></div>
           <div class="field"><label>HSN code</label><input id="hsn" value="8518300000"/></div>
         </div>
-        <div class="g2">
+        <div class="g3">
           <div class="field"><label>Supplier cost / unit (USD)</label><input id="cost" type="number" value="8.50" oninput="calc()"/></div>
           <div class="field"><label>Quantity (units)</label><input id="qty" type="number" value="100" oninput="calc()"/></div>
+          <div class="field"><label>USD → INR rate</label><input id="fxrate" type="number" value="83.5" oninput="calc()"/></div>
         </div>
-        <input id="fxrate" type="hidden" value="83.5"/>
       </div>
 
       <div class="section-label">02 — Freight & Duty</div>
@@ -268,14 +213,14 @@ footer p{font-size:12px;color:var(--muted)}
         <div class="g3">
           <div class="field"><label>SWS % <span style="opacity:0.5">(auto)</span></label><input id="sws" type="number" readonly/><span class="hint">Always 10% of BCD</span></div>
           <div class="field"><label>IGST %</label><input id="igst" type="number" value="18" oninput="calc()"/></div>
-          <div class="field"><label>Local charges / unit (<span class="cur-label">INR</span>)</label><input id="local" type="number" value="50" oninput="calc()"/><span class="hint">Port, CHA, transport</span></div>
+          <div class="field"><label>Local charges / unit (INR)</label><input id="local" type="number" value="50" oninput="calc()"/><span class="hint">Port, CHA, transport</span></div>
         </div>
       </div>
 
       <div class="section-label">03 — Selling</div>
       <div class="card">
         <div class="g2">
-          <div class="field"><label>Selling price / unit (<span class="cur-label">INR</span>)</label><input id="sell" type="number" value="1299" oninput="calc()"/></div>
+          <div class="field"><label>Selling price / unit (INR)</label><input id="sell" type="number" value="1299" oninput="calc()"/></div>
           <div class="field"><label>Platform fee %</label><input id="pfee" type="number" value="15" oninput="calc()"/><span class="hint">Amazon, Flipkart, Meesho…</span></div>
         </div>
       </div>
@@ -292,7 +237,7 @@ footer p{font-size:12px;color:var(--muted)}
 
       <footer>
         <p><span class="dot"></span>Live — updates as you type</p>
-        <p style="font-family:var(--mono);font-size:11px;color:var(--muted)">Import IQ v1.2</p>
+        <p style="font-family:var(--mono);font-size:11px;color:var(--muted)">ImportIQ v1.1</p>
       </footer>
 
     </div>
@@ -300,54 +245,8 @@ footer p{font-size:12px;color:var(--muted)}
 </div>
 
 <script>
-let displayCurrency = 'INR';
-let lastFxRate = 83.5;
-
-function setCurrency(cur) {
-  const prevCur = displayCurrency;
-  displayCurrency = cur;
-  document.getElementById('btn-inr').classList.toggle('active', cur === 'INR');
-  document.getElementById('btn-usd').classList.toggle('active', cur === 'USD');
-
-  // Update currency labels in field headings
-  document.querySelectorAll('.cur-label').forEach(el => el.textContent = cur);
-
-  // Convert sell and local input values
-  const sellEl = document.getElementById('sell');
-  const localEl = document.getElementById('local');
-  const fx = lastFxRate || 83.5;
-
-  if (prevCur !== cur) {
-    if (cur === 'USD') {
-      // Convert INR inputs → USD
-      sellEl.value = (parseFloat(sellEl.value) / fx).toFixed(2);
-      localEl.value = (parseFloat(localEl.value) / fx).toFixed(2);
-    } else {
-      // Convert USD inputs → INR
-      sellEl.value = Math.round(parseFloat(sellEl.value) * fx);
-      localEl.value = Math.round(parseFloat(localEl.value) * fx);
-    }
-  }
-
-  calc();
-}
-
-function fmt(inrVal, dec=2) {
-  if (displayCurrency === 'USD') {
-    const usd = inrVal / lastFxRate;
-    return '$' + usd.toLocaleString('en-US', {minimumFractionDigits: dec, maximumFractionDigits: dec});
-  }
-  return '₹' + inrVal.toLocaleString('en-IN', {minimumFractionDigits: dec, maximumFractionDigits: dec});
-}
-
-function fmtC(inrVal) {
-  if (displayCurrency === 'USD') {
-    const usd = inrVal / lastFxRate;
-    return '$' + Math.round(usd).toLocaleString('en-US');
-  }
-  return '₹' + Math.round(inrVal).toLocaleString('en-IN');
-}
-
+function fmt(n,dec=2){return '₹'+n.toLocaleString('en-IN',{minimumFractionDigits:dec,maximumFractionDigits:dec})}
+function fmtC(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
 function pct(n){return n.toFixed(1)+'%'}
 
 function renderJourney(data){
@@ -410,85 +309,16 @@ function renderJourney(data){
   document.getElementById('journey').innerHTML = html;
 }
 
-// ── FX Panel ──
-let fxPanelOpen = false;
-let fxFromCur = 'USD';
-let fxToCur = 'INR';
-
-function toggleFxPanel() {
-  fxPanelOpen = !fxPanelOpen;
-  document.getElementById('fxPanel').classList.toggle('open', fxPanelOpen);
-  document.getElementById('hbtn').classList.toggle('open', fxPanelOpen);
-  // Update rate display
-  document.getElementById('fx-rate-display').textContent = (lastFxRate||83.5).toFixed(2);
-}
-
-// Close panel when clicking outside
-document.addEventListener('click', function(e){
-  if(fxPanelOpen && !e.target.closest('.hamburger-wrap')) {
-    fxPanelOpen = false;
-    document.getElementById('fxPanel').classList.remove('open');
-    document.getElementById('hbtn').classList.remove('open');
-  }
-});
-
-function fxConvert(dir) {
-  const fx = lastFxRate || 83.5;
-  const fromEl = document.getElementById('fx-from');
-  const toEl = document.getElementById('fx-to');
-  if (dir === 'from') {
-    const v = parseFloat(fromEl.value);
-    if (!isNaN(v)) {
-      const result = fxFromCur === 'USD' ? v * fx : v / fx;
-      toEl.value = result.toFixed(2);
-    } else { toEl.value = ''; }
-  } else {
-    const v = parseFloat(toEl.value);
-    if (!isNaN(v)) {
-      const result = fxToCur === 'INR' ? v / fx : v * fx;
-      fromEl.value = result.toFixed(2);
-    } else { fromEl.value = ''; }
-  }
-}
-
-function fxSwap() {
-  [fxFromCur, fxToCur] = [fxToCur, fxFromCur];
-  document.getElementById('fx-from-label').textContent = fxFromCur;
-  document.getElementById('fx-to-label').textContent = fxToCur;
-  // Swap values
-  const fromEl = document.getElementById('fx-from');
-  const toEl = document.getElementById('fx-to');
-  [fromEl.value, toEl.value] = [toEl.value, fromEl.value];
-}
-
-function fxCopy() {
-  const toEl = document.getElementById('fx-to');
-  const fromEl = document.getElementById('fx-from');
-  const val = toEl.value || fromEl.value;
-  if (!val) return;
-  const label = toEl.value ? `${toEl.value} ${fxToCur}` : `${fromEl.value} ${fxFromCur}`;
-  navigator.clipboard.writeText(label).then(() => {
-    const btn = document.getElementById('fx-copy-btn');
-    btn.textContent = '✓ Copied!';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copy result'; btn.classList.remove('copied'); }, 1800);
-  });
-}
-
-// ── Main calc ──
+function calc(){
   const costUSD  = parseFloat(document.getElementById('cost').value)||0;
   const qty      = parseFloat(document.getElementById('qty').value)||1;
   const fxrate   = parseFloat(document.getElementById('fxrate').value)||83.5;
-  lastFxRate = fxrate;
-  // Keep FX panel rate display in sync
-  const fxDisp = document.getElementById('fx-rate-display');
-  if(fxDisp) fxDisp.textContent = fxrate.toFixed(2);
   const freightP = parseFloat(document.getElementById('freight').value)||0;
   const insP     = parseFloat(document.getElementById('insurance').value)||0;
   const bcdP     = parseFloat(document.getElementById('bcd').value)||0;
   const igstP    = parseFloat(document.getElementById('igst').value)||0;
-  const local    = (parseFloat(document.getElementById('local').value)||0) * (displayCurrency==='USD' ? fxrate : 1);
-  const sell     = (parseFloat(document.getElementById('sell').value)||0)  * (displayCurrency==='USD' ? fxrate : 1);
+  const local    = parseFloat(document.getElementById('local').value)||0;
+  const sell     = parseFloat(document.getElementById('sell').value)||0;
   const pfeeP    = parseFloat(document.getElementById('pfee').value)||0;
   const swsP     = bcdP * 0.10;
 
